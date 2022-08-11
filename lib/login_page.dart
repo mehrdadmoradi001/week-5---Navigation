@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation/blog_page.dart';
+import 'forget_password.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  void navigateToPage(BuildContext context, Widget page) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) => page,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +50,9 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  navigateToPage(context, BlogScreen());
+                },
                 child: Text(
                   'ورود به حساب',
                   style: TextStyle(fontSize: 16),
@@ -58,6 +70,13 @@ class LoginPage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: Text('ثبت نام'),
+              ),
+              TextButton(
+                onPressed: () {
+                  navigateToPage(context, ForgetPassword());
+                },
+                child: Text('فراموشی رمز عبور'),
+                style: TextButton.styleFrom(primary: Colors.grey[200]),
               ),
             ],
           ),
