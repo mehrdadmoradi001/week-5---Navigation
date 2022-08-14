@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    ('خوش آمدید'),
+                    ('VIP اپلیکیشن سیگنال'),
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   SizedBox(width: 10),
@@ -38,13 +38,13 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
               Image(
-                image: AssetImage('images/welcome.png'),
+                image: AssetImage('images/w.png'),
               ),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(200.0, 40.0),
-                  side: BorderSide(color: Colors.white, width: 2.0),
-                  primary: Colors.white,
+                  side: BorderSide(color: Colors.black, width: 2.0),
+                  primary: Colors.black,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(20),
@@ -77,7 +77,7 @@ class LoginPage extends StatelessWidget {
                   navigateToPage(context, ForgetPassword());
                 },
                 child: Text('فراموشی رمز عبور'),
-                style: TextButton.styleFrom(primary: Colors.grey[200]),
+                style: TextButton.styleFrom(primary: Colors.grey[600]),
               ),
             ],
           ),
